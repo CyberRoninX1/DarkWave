@@ -1,0 +1,11 @@
+{
+    "telegram": {
+        "enabled": false,
+        "token": "",
+        "chat_id": ""
+    },
+    "discord": {
+        "enabled": false,
+        "webhook_url": ""
+    }
+}
