@@ -1,0 +1,8 @@
+output/
+*.log
+cloudflared
+.tunnel.log
+.DS_Store
+*.txt
+!README.md
+!requirements.txt
