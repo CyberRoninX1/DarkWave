@@ -1,0 +1,19 @@
+{
+    "version": "1.0",
+    "name": "Darkweave",
+    "author": "CyberRoninX1",
+    "features": {
+        "cookies": true,
+        "location": true,
+        "camera": true,
+        "fingerprint": true,
+        "storage": true,
+        "keylogger": false,
+        "screenshot": true
+    },
+    "stealth": {
+        "enabled": false,
+        "noConsole": true,
+        "noLogs": false
+    }
+}
